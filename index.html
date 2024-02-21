@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+     <meta charset="UTF-8">
+    <title>Graficki Dizajn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container">
+    <section id="banner">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="banner-pozadina">
+          <video autoplay muted loop>
+        <source src="images/012.mp4" type="video/mp4" />
+    </video>
+    </div>
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="banner-text">
+        <h1>Dobrodošli na moju stranicu,</h1> 
+        <p>Ja sam Dobrica Teodosić <br> Graficki dizajner</p>
+        <div class="banner-btn">
+        <a href="#footer"><span></span>Kontakt</a>
+      <a href="galerija/index.html"><span></span>Portfolio</a>
+        </div>
+        </div>
+</section>
+<div id="sideNav">
+    <nav>
+        <ul>
+            <li><a href="#banner" onclick="closeMenu()">POCETNA</a></li>
+            <li><a href="#feature" onclick="closeMenu()">O MENI</a></li>
+            <li><a href="#footer" onclick="closeMenu()">KONTAKT</a></li>
+            <li><a href="galerija/index.html" onclick="closeMenu()">PORTFOLIO</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="menuBtn">
+    <img src="images/menu.png" id="menu" alt="menu" onclick="toggleMenu()">
+</div>
+
+    
+<!-- Features -->    
+<section id="feature">
+     <div class="feature-pozadina">
+          <video autoplay muted loop>
+        <source src="images/112.mp4" type="video/mp4" />
+    </video>
+    <div class="feature-title-text">
+        <h1>O MENI</h1>
+    </div>
+    <div class="feature-box">
+        <div class="features">            
+                </div>
+                <div class="feature-text">
+                     <p>Pozdrav! Ja sam graficki dizajner sa iskustvom u industriji od 2016. godine, a moj fokus je prvobitno bio na logo dizajnu. Kroz godine rada, proširio sam svoje veštine kako bih obuhvatio različite aspekte grafickog dizajna.
+
+Tokom vremena, stekao sam korisno iskustvo radeći sa klijentima kako u Srbiji, tako i širom sveta. Učestvovanje na freelance platformama, uključujući dizajnerske konkurse, doprinelo je razvoju mog raznovrsnog pristupa svakom projektu. Moj fokus na kvalitetu i predanost garantuju da ćete dobiti jedinstven i profesionalan dizajn prilagođen vašim potrebama.
+
+Moj portfelj obuhvata različite stilove, od kompleksnih ilustracija do minimalističkog dizajna. Bez obzira da li je u pitanju izrada prepoznatljivog logotipa koji ističe vaš brend ili kreiranje modernog web dizajna koji privlači pažnju, moje iskustvo i veštine pokrivaju širok spektar grafickog dizajna.
+
+Posebno sam iskusan u vektorskom dizajnu, pružajući visokokvalitetne i skalabilne rezultate. Obezbediću vam profesionalnu uslugu koja će zadovoljiti, i čak premašiti, vaša očekivanja, donoseći vašim projektima kreativnost, pažnju na detalje i stručnost.
+
+Izaberite mene za vaš sledeći projekat, i zajedno ćemo stvoriti vizuelno iskustvo koje će se istaći i ostaviti snažan utisak. Hvala vam na poseti, radujem se saradnji s vama.</p>
+                </div>
+              </div>
+        </div>     
+</section> 
+
+    
+ <!-- footer -->    
+    
+<section id="footer">
+    <div class="footer-pozadina">
+          <video autoplay muted loop>
+        <source src="images/15.mp4" type="video/mp4" />
+    </video>
+    <img src="images/footer.png" class="footer-img" alt="footer-img">
+    <div class="title-text">
+    <p>KONTAKT</p>
+    </div>
+<div class="footer-row">
+<div class="footer-left">
+    <h1>Instagram link</h1>
+    <div class="social-links">
+     <a target = "blank" href = 'https://www.instagram.com/dt_graficki_dizajn/'><i class="fa fa-instagram"></i> </a></div>    
+</div>
+<div class="footer-right">
+    <h1>Kontakt Info</h1>
+    <p><i class="fa fa-map-marker"></i> Novi Sad</p>
+    <p><i class="fa fa-phone"></i> +381 63 160 777 2</p>
+    <p><i class="fa fa-paper-plane"></i> DobricaTeodosic488@gmail.com</p></div>
+</div>    
+<div class="copyright">
+    <p>Copyright DT design</p>
+</div>    
+</div>    
+    
+    
+    
+</section>
+ </div>   
+</div>    
+<script>
+  function closeMenu() {
+        document.getElementById("sideNav").style.right = "-250px";
+        document.getElementById("menuBtn").innerHTML = '<img src="images/menu.png" id="menu" alt="menu">';
+    }
+
+    function toggleMenu() {
+        var sideNav = document.getElementById("sideNav");
+        if (sideNav.style.right === "-250px" || sideNav.style.right === "") {
+            sideNav.style.right = "0";
+            document.getElementById("menuBtn").innerHTML = '<img src="images/close.png" id="close" alt="close">';
+        } else {
+            sideNav.style.right = "-250px";
+            document.getElementById("menuBtn").innerHTML = '<img src="images/menu.png" id="menu" alt="menu">';
+        }
+    }
+   
+
+    
+var menuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+ 
+sideNav.style.right = "-250px";
+
+menuBtn.onclick = function(){
+    if(sideNav.style.right == "-250px"){
+        sideNav.style.right ="0";
+        menu.src = "images/close.png";
+    }
+    else{
+        sideNav.style.right = "-250px";
+        menu.src = "images/menu.png";
+    }
+}
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+	speedAsDuration: true
+});
+</script>
+</body>
+</html>

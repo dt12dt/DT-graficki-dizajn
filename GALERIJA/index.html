@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pure CSS Lightbox using :target and :has</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://kit.fontawesome.com/0786c5feec.css" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color:#1E1E1E;">
+     <div class="loader-wrapper">
+    <div class="loader">
+      <img src="images/black-smal.png" alt="Tvoj Logo">
+    </div>
+  </div>
+    <a href="file:///C:/Users/YUZER/Desktop/dobrica%20website/index.html" class="back-link">← Nazad na Početnu</a>
+  <div class="gallery">
+  <div class="img-w">
+    <img src="images/COFFEE-BLACK.png" alt="" /></div>
+  <div class="img-w"><img src="images/1c.png" alt="" /></div>
+  <div class="img-w"><img src="images/golde.png" alt="" /></div>
+  <div class="img-w"><img src="images/HOMETOWN-BLUE.png" alt="" /></div>
+  <div class="img-w"><img src="images/hot-rod-BLUE.png" alt="" /></div>
+  <div class="img-w"><img src="images/native-current.png" alt="" /></div>
+  <div class="img-w"><img src="images/DOG-COMB.png" alt="" /></div>
+  <div class="img-w"><img src="images/MANGO-SHORT%20CUT.png" alt="" /></div>
+  <div class="img-w"><img src="images/hive.png" alt="" /></div>
+</div>
+    <div class="img-w">
+    <img src="images/HYDRO-BL.png" alt="" /></div>
+  <div class="img-w"><img src="images/zadatak2%20plava%20v.png" alt="" /></div>
+  <div class="img-w"><img src="images/IMG_20210929_205035_285.webp" alt="" /></div>
+  <div class="img-w"><img src="images/ZR-ROSE3.png" alt="" /></div>
+    <div class="img-w"><img src="images/COFFE-TRUCK.png" alt="" /></div>
+  <div class="img-w"><img src="images/sumota2%20(1)%20-%20Copy.png" alt="" /></div>
+  <div class="img-w"><img src="images/bubble-tea-ice-cream3.png" alt="" /></div>
+  <div class="img-w"><img src="images/alien-final.png" alt="" /></div>
+  <div class="img-w"><img src="images/TRUE-NORTH2.png" alt="" /></div>
+     <div class="img-w">
+    <img src="images/divano-logo-prikaz.png" alt="" /></div>
+     <div class="img-w"><img src="images/med-beli.png" alt="" /></div>
+  <div class="img-w"><img src="images/daywalk.png" alt="" /></div>
+  <div class="img-w"><img src="images/SILVER%20TOKYO%20FINAL.png" alt="" /></div>
+  <div class="img-w"><img src="images/weburg-1%201000.png" alt="" /></div>
+  <div class="img-w"><img src="images/ae%20prev%202.png" alt="" /></div>
+  <div class="img-w"><img src="images/AI.png" alt="" /></div>
+  <div class="img-w"><img src="images/CAT-FIN.png" alt="" /></div>
+  <div class="img-w"><img src="images/LMN2.png" alt="" /></div>
+    <div class="img-w">
+    <img src="images/V2.png" alt="" /></div>
+     <div class="img-w"><img src="images/magic-dog-4.png" alt="" /></div>
+  <div class="img-w"><img src="images/IMG_20211003_195725_375.jpg" alt="" /></div>
+  <div class="img-w"><img src="images/Art&Time.png" alt="" /></div>
+  <div class="img-w"><img src="images/knife.png" alt="" /></div>
+  <div class="img-w"><img src="images/BW1.png" alt="" /></div>
+  <div class="img-w"><img src="images/SQUAREBUILT2.png" alt="" /></div>
+  <div class="img-w"><img src="images/FREEDOM-ONLY%202000x2000.png" alt="" /></div>
+  <div class="img-w"><img src="images/nonno-pepinos3.png" alt="" /></div>
+  <div class="img-w"><img src="images/csacasc.jpg" alt="" /></div>
+  <div class="img-w"><img src="images/BANK.png" alt="" /></div>
+  <div class="img-w"><img src="images/skinfx.png" alt="" /></div> 
+    
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+      
+      $(document).ready(function() {
+     setTimeout(function() {
+    document.querySelector('.loader-wrapper').classList.add('lifted');
+  }, 1000);
+
+  setTimeout(function() {
+    document.querySelector('.loader-wrapper').style.display = 'none';
+  }, 3000);
+
+  $(function() {
+    $(".img-w").each(function() {
+      $(this).wrap("<div class='img-c'></div>")
+      let imgSrc = $(this).find("img").attr("src");
+      $(this).css('background-image', 'url(' + imgSrc + ')');
+    })
+
+    $(".img-c").click(function() {
+      let w = $(this).outerWidth()
+      let h = $(this).outerHeight()
+      let x = $(this).offset().left
+      let y = $(this).offset().top
+
+      $(".active").not($(this).prev(".img-c")).remove();
+      let copy = $(this).clone();
+      copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+      $(".active").css('top', y - 8);
+      $(".active").css('left', x - 8);
+
+      setTimeout(function() {
+        copy.addClass("positioned")
+      }, 0)
+    })
+
+    $(document).on("click", ".active", function() {
+      $(this).remove();
+    });
+
+  })
+
+});
+
+  </script>
+</body>
+</html>
