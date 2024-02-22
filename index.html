@@ -18,8 +18,8 @@
     <section id="banner">
     <img src="images/logo.png" class="logo" alt="Logo">
     <div class="banner-pozadina">
-        <video id="background-video" playsinline muted loop>
-   <source src="images/output.mp4" type="video/mp4">
+        <video playsinline autoplay loop muted>
+   <source src="images/output.mp4" type="video/mp4" />
    Your browser does not support the video tag.
 </video>
 
@@ -112,15 +112,7 @@ Izaberite mene za vaš sledeći projekat, i zajedno ćemo stvoriti vizuelno isku
 </section>
  </div>   
 </div>   
-	<script>
-   document.addEventListener('DOMContentLoaded', function () {
-      var video = document.getElementById('background-video');
-      video.play().catch(function (error) {
-         // Autoplay was prevented.
-         // Handle the promise rejection (possibly by showing a play button).
-      });
-   });
-</script>
+	
 <script>
   function closeMenu() {
         document.getElementById("sideNav").style.right = "-250px";
