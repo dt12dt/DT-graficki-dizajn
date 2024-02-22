@@ -536,6 +536,13 @@ nav ul li a{
 .footer-right .fa{
     font-size: 20px;
 }
+   #footer .footer-pozadina video {
+        display: none;
+    }
+    #footer .footer-pozadina {
+        background: url('image/15.mp4) center center/cover;
+        height: 200px; /* Podesite visinu slike prema potrebi */
+}       
     #footer .title-text h1 {
         font-size: 40px;
         z-index: 2;
